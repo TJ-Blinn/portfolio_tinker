@@ -1,3 +1,13 @@
+## libraries
+
+1. styled-components
+2. react-intersection-observer
+3. npm install react-particles-js
+4. npm install react-router-dom
+5. material-ui - npm install @mui/material @emotion/react @emotion/styled
+
+\_\_
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

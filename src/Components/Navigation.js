@@ -68,9 +68,31 @@ const NavigationStyled = styled.nav`
     text-align: center;
     padding: 1rem;
     img {
-      width: 80%;
+      width: 70%;
       border-radius: 50%;
       border: 8px solid var(--border-color);
+    }
+  }
+
+  .nav-items {
+    width: 100%;
+    text-align: center;
+    li {
+      display: block;
+      a {
+        display: block;
+      }
+    }
+  }
+
+  footer {
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    p {
+      padding: 2rem 0;
+      font-size: 1.1rem;
+      display: block;
+      text-align: center;
     }
   }
 `;

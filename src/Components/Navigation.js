@@ -15,7 +15,41 @@ function Navigation() {
             Home
           </NavLink>
         </li>
+
+        <li className="nav-item">
+          <NavLink to="/about" activeClassName="activeClass">
+            About
+          </NavLink>
+        </li>
+
+        <li className="nav-item">
+          <NavLink to="/resume" activeClassName="activeClass">
+            Resume
+          </NavLink>
+        </li>
+
+        <li className="nav-item">
+          <NavLink to="/Portfolio" activeClassName="activeClass">
+            Portfolio
+          </NavLink>
+        </li>
+
+        <li className="nav-item">
+          <NavLink to="/blogs" activeClassName="activeClass">
+            Blogs
+          </NavLink>
+        </li>
+
+        <li className="nav-item">
+          <NavLink to="/contact" activeClassName="activeClass">
+            Contact
+          </NavLink>
+        </li>
       </ul>
+
+      <footer className="footer">
+        <p>@2022 Anthony-J. Blinn Portfolio</p>
+      </footer>
     </NavigationStyled>
   );
 }

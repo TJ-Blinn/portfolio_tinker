@@ -12,7 +12,7 @@ ${"" /* define root element and specify vars to be used accross the page */}
   --font-light-color: #a4acc4;
   --font-dark-color: #313131;
   --font-dark-color-2:#151515;
-  
+  --sidebar-dark-color: #191d2b;
 }
 
 
@@ -23,10 +23,12 @@ ${"" /* define root element and specify vars to be used accross the page */}
       font-size: 1.2rem;
       list-style: none;
       text-decoration: none;
+      font-family: 'Nunito', sans-serif;
   }
 
   body{
     background-color: var(--background-dark-color);
+    color: var(--font-light-color);
   }
 `;
 export default GlobalStyle;

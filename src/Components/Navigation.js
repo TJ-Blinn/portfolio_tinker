@@ -77,10 +77,39 @@ const NavigationStyled = styled.nav`
   .nav-items {
     width: 100%;
     text-align: center;
+    .active-class {
+      background-color: var(--primary-color);
+      color: white;
+    }
     li {
       display: block;
       a {
         display: block;
+        padding: 0.2rem 0;
+        position: relative;
+        z-index: 10;
+        /* transition: all 0.4s ease-in-out; */
+        &:hover {
+          cursor: pointer;
+          color: var(--white-color);
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 50%;
+          background-color: var(--primary-color);
+          transition: All 0.4s cubic-bezier(1, -0.22, 0.23, 0.93);
+          opacity: 0.21;
+          z-index: -1;
+          /* transform-origin: right; */
+        }
+      }
+      a:hover::before {
+        width: 100%;
+        height: 100%;
       }
     }
   }

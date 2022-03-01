@@ -54,6 +54,25 @@ function Navigation() {
   );
 }
 
-const NavigationStyled = styled.nav``;
+const NavigationStyled = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  .avatar {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1rem;
+    img {
+      width: 80%;
+      border-radius: 50%;
+      border: 8px solid var(--border-color);
+    }
+  }
+`;
 
 export default Navigation;

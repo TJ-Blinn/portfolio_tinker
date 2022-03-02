@@ -24,11 +24,29 @@ ${"" /* define root element and specify vars to be used accross the page */}
       list-style: none;
       text-decoration: none;
       font-family: 'Nunito', sans-serif;
+     
   }
 
   body{
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
+  }
+
+  a{
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  h1{
+    font-size: 2rem;
+    color: var(--white-color)
+      
+  }
+
+  span{
+    color: var(--primary-color);
+    font-size: 2rem;
   }
 `;
 export default GlobalStyle;

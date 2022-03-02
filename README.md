@@ -4,7 +4,8 @@
 2. react-intersection-observer
 3. npm install react-particles-js
 4. npm install react-router-dom
-5. material-ui - npm install @mui/material @emotion/react @emotion/styled
+5. material-ui - npm install @mui/material @emotion/react @emotion/styled @material-ui/icons
+6. particles.js
 
 \_\_
 

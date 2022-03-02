@@ -87,7 +87,7 @@ const NavigationStyled = styled.nav`
         display: block;
         padding: 0.2rem 0;
         position: relative;
-        z-index: 10;
+        /* z-index: 10; */
         /* transition: all 0.4s ease-in-out; */
         &:hover {
           cursor: pointer;
@@ -103,7 +103,7 @@ const NavigationStyled = styled.nav`
           background-color: var(--primary-color);
           transition: All 0.4s cubic-bezier(1, -0.22, 0.23, 0.93);
           opacity: 0.21;
-          z-index: -1;
+          /* z-index: -1; */
           /* transform-origin: right; */
         }
       }

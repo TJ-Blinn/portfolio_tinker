@@ -3,7 +3,7 @@ import styled from "styled-components";
 // import Particle from "../Components/Particle.js";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function HomePage() {
   return (
@@ -19,16 +19,17 @@ function HomePage() {
           Nullam.
         </p>
 
+        {/* Update links below for Social Media */}
         <div className="icons">
-          <div className="icon i-facebook">
+          <a href="https://www.facebook.com/jenn.guzzo" className="icon i-facebook">
             <FacebookIcon />
-          </div>
-          <div className="icon i-github">
+          </a>
+          <a href="https://www.instagram.com/j_hugz/" className="icon i-github">
             <GitHubIcon />
-          </div>
-          <div className="icon i-youtube">
-            <YouTubeIcon />
-          </div>
+          </a>
+          <a href="https://www.linkedin.com/in/jenniferguzzo/" className="icon i-linkedin">
+            <LinkedInIcon />
+          </a>
         </div>
       </div>
     </HomePageStyled>
@@ -69,6 +70,7 @@ const HomePageStyled = styled.header`
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+        transition: all 0.4s ease-in-out;
         &:hover {
           border: 2px solid var(--primary-color);
           color: var(--primary-color);
@@ -81,6 +83,26 @@ const HomePageStyled = styled.header`
 
         svg {
           margin: 0.5rem;
+        }
+      }
+      /* Adding diff colors for each icon */
+      .i-facebook {
+        &:hover {
+          border: 2px solid rgb(56, 88, 152);
+          color: rgb(56, 88, 152);
+        }
+      }
+      .i-github {
+        &:hover {
+          border: 2px solid rgb(36, 41, 47);
+          color: rgb(36, 41, 47);
+        }
+      }
+
+      .i-linkedin {
+        &:hover {
+          border: 2px solid rgb(10, 102, 194);
+          color: rgb(10, 102, 194);
         }
       }
     }

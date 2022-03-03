@@ -41,10 +41,6 @@ const HomePageStyled = styled.header`
   height: 100vh;
   position: relative;
 
-  .typography {
-    z-index: 2;
-  }
-
   .p-particles-js {
     position: absolute;
     top: 0;
@@ -53,6 +49,7 @@ const HomePageStyled = styled.header`
 
   .typography {
     position: absolute;
+    /* z-index: 2; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

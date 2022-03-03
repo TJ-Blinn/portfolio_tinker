@@ -11,37 +11,37 @@ function Navigation() {
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <NavLink to="/home" activeClassName="activeClass">
+          <NavLink to="/" activeClassName="activeClass" exact>
             Home
           </NavLink>
         </li>
 
         <li className="nav-item">
-          <NavLink to="/about" activeClassName="activeClass">
+          <NavLink to="/about" activeClassName="activeClass" exact>
             About
           </NavLink>
         </li>
 
         <li className="nav-item">
-          <NavLink to="/resume" activeClassName="activeClass">
+          <NavLink to="/resume" activeClassName="activeClass" exact>
             Resume
           </NavLink>
         </li>
 
         <li className="nav-item">
-          <NavLink to="/Portfolio" activeClassName="activeClass">
+          <NavLink to="/Portfolio" activeClassName="activeClass" exact>
             Portfolio
           </NavLink>
         </li>
 
         <li className="nav-item">
-          <NavLink to="/blogs" activeClassName="activeClass">
+          <NavLink to="/blogs" activeClassName="activeClass" exact>
             Blogs
           </NavLink>
         </li>
 
         <li className="nav-item">
-          <NavLink to="/contact" activeClassName="activeClass">
+          <NavLink to="/contact" activeClassName="activeClass" exact>
             Contact
           </NavLink>
         </li>
@@ -78,17 +78,19 @@ const NavigationStyled = styled.nav`
     width: 100%;
     text-align: center;
     .active-class {
-      background-color: var(--primary-color);
+      background-color: var(--primary-color-light);
       color: white;
     }
     li {
       display: block;
       a {
         display: block;
-        padding: 0.2rem 0;
+        padding: 0.3rem 0;
         position: relative;
-        /* z-index: 10; */
-        /* transition: all 0.4s ease-in-out; */
+        z-index: 10;
+        transition: all 0.4s ease-in-out;
+        font-weight: 400;
+        letter-spacing: 1px;
         &:hover {
           cursor: pointer;
           color: var(--white-color);
@@ -103,7 +105,7 @@ const NavigationStyled = styled.nav`
           background-color: var(--primary-color);
           transition: All 0.4s cubic-bezier(1, -0.22, 0.23, 0.93);
           opacity: 0.21;
-          /* z-index: -1; */
+          z-index: -1;
           /* transform-origin: right; */
         }
       }

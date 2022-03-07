@@ -6,6 +6,7 @@ ${"" /* define root element and specify vars to be used accross the page */}
   --primary-color: #007bff;
   --seconday-color: #6c757d;
   --background-dark-color: #10121a;
+  --background-dark-grey: #191d2b;
   --border-color:#2e344e;
   --background-light-color: #f1f1f1;
   --white-color: #fff;

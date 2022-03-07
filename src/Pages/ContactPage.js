@@ -9,11 +9,16 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 function ContactPage() {
+  const phone = <PhoneIcon />;
+  const email = <EmailIcon />;
+  const location = <LocationOnIcon />;
+
   return (
     <MainLayout>
       <Title title={"Contact"} span={"Contact"} />
       <ContactPageStyled>
         <InnerLayout className={"contact-section"}>
+          {/* LEFT SIDE CONTENT ------------------------- */}
           <div className="left-content">
             <div className="contact-title">
               <h4>Get In Touch</h4>
@@ -45,8 +50,12 @@ function ContactPage() {
               </div>
             </form>
           </div>
+
+          {/* RIGHT SIDE CONTENT ------------------------- */}
           <div className="right-content">
-            <ContactItem icon={PhoneIcon} title={"Phone"} contact1={"+1-514-555-5555"} contact1={"+1-514-555-5555"} />
+            <ContactItem title={"Phone"} icon={phone} contact1={"+1-514-555-5555"} />
+            <ContactItem title={"Email"} icon={email} contact1={"guzzojenn@gmail.com"} />
+            <ContactItem title={"Location"} icon={location} contact1={"Montreal, QC Canada"} />
           </div>
         </InnerLayout>
       </ContactPageStyled>
@@ -58,6 +67,12 @@ const ContactPageStyled = styled.section`
   .contact-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+
+    .right-content {
+      display: flex;
+      flex-direction: column;
+    }
     .contact-title {
       h4 {
         color: var(--white-color);

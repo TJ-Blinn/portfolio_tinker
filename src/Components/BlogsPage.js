@@ -41,8 +41,8 @@ const BlogsStyled = styled.div`
     }
     .image {
       width: 100%;
-      height: 90%;
       overflow: hidden;
+      padding-bottom: 0.5rem;
     }
     img {
       width: 100%;
@@ -58,8 +58,8 @@ const BlogsStyled = styled.div`
   .title {
     a {
       font-size: 1.5rem;
-      padding: 0.5rem 0;
-      color: var(--color-white);
+      padding: 2rem 0;
+      color: var(--white-color);
       cursor: pointer;
       transition: all 0.4s ease-in-out;
       &:hover {

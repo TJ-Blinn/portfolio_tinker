@@ -20,14 +20,15 @@ function ServicesSection() {
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, purus acconvallis gravida, urna ex luctus elit, vel lacinia nisl lorem et orci. Morbi sapien mauris, placerat eget turpis non, condimentum tempor."
             }
           />
-
-          <ServiceCard
-            icon={<CasinoIcon fontSize="large" />}
-            title={"Amateur Boardgame Designer"}
-            paragraph={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, purus acconvallis gravida, urna ex luctus elit, vel lacinia nisl lorem et orci. Morbi sapien mauris, placerat eget turpis non, condimentum tempor."
-            }
-          />
+          <div className="mid-card">
+            <ServiceCard
+              icon={<CasinoIcon fontSize="large" />}
+              title={"Amateur Boardgame Designer"}
+              paragraph={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, purus acconvallis gravida, urna ex luctus elit, vel lacinia nisl lorem et orci. Morbi sapien mauris, placerat eget turpis non, condimentum tempor."
+              }
+            />
+          </div>
 
           <ServiceCard
             icon={<ChairIcon fontSize="large" />}
@@ -42,6 +43,15 @@ function ServicesSection() {
   );
 }
 
-const ServicesSectionStyled = styled.section``;
+const ServicesSectionStyled = styled.section`
+  .services {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    .mid-card {
+      margin: 0 1rem;
+    }
+  }
+`;
 
 export default ServicesSection;

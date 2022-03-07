@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 function ReviewItem({ text }) {
   return (
@@ -16,7 +16,7 @@ const ReviewItemStyled = styled.div`
   position: relative;
   width: 50%;
   &:not(:first-child) {
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
   &::after {
     content: "";

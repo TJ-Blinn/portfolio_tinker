@@ -48,7 +48,7 @@ function Navigation() {
       </ul>
 
       <footer className="footer">
-        <p>@2022 Anthony-J. Blinn Portfolio</p>
+        <p>@2022 Jenn Guzzo Portfolio</p>
       </footer>
     </NavigationStyled>
   );

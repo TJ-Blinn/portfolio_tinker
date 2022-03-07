@@ -50,5 +50,11 @@ ${"" /* define root element and specify vars to be used accross the page */}
     color: var(--primary-color);
     font-size: 2rem;
   }
+
+  h6{
+    color: var(--white-color);
+    font-size: 1.2rem;
+    padding-bottom: .6rem;
+  }
 `;
 export default GlobalStyle;

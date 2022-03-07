@@ -8,19 +8,17 @@ import Title from "./Title";
 function Skills() {
   return (
     <SkillsStyled>
-      <MainLayout>
-        <Title title={"Resume"} span={"Resume"} />
-        <InnerLayout>
-          <div className="skills">
-            <ProgressBar title={"Narrative Design"} width={"80%"} text={"80%"} />
-            <ProgressBar title={"Dialogue Writing"} width={"70%"} text={"70%"} />
-            <ProgressBar title={"Character Creation and Development"} width={"70%"} text={"70%"} />
-            <ProgressBar title={"World Building and Lore Creation"} width={"50%"} text={"50%"} />
-            <ProgressBar title={"Pitch and Design Document Writing"} width={"30%"} text={"30%"} />
-            <ProgressBar title={"Creative Writing"} width={"60%"} text={"60%"} />
-          </div>
-        </InnerLayout>
-      </MainLayout>
+      <Title title={"My Skills"} span={"My Skills"} />
+      <InnerLayout>
+        <div className="skills">
+          <ProgressBar title={"Narrative Design"} width={"80%"} text={"80%"} />
+          <ProgressBar title={"Dialogue Writing"} width={"70%"} text={"70%"} />
+          <ProgressBar title={"Character Creation and Development"} width={"70%"} text={"70%"} />
+          <ProgressBar title={"World Building and Lore Creation"} width={"50%"} text={"50%"} />
+          <ProgressBar title={"Pitch and Design Document Writing"} width={"30%"} text={"30%"} />
+          <ProgressBar title={"Creative Writing"} width={"60%"} text={"60%"} />
+        </div>
+      </InnerLayout>
     </SkillsStyled>
   );
 }

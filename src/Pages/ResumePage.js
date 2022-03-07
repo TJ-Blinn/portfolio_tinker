@@ -1,7 +1,12 @@
 import React from "react";
+import Skills from "../Components/Skills";
 
 function ResumePage() {
-  return <div></div>;
+  return (
+    <div>
+      <Skills />
+    </div>
+  );
 }
 
 export default ResumePage;

@@ -56,5 +56,11 @@ ${"" /* define root element and specify vars to be used accross the page */}
     font-size: 1.2rem;
     padding-bottom: .6rem;
   }
+
+// Utility class
+.utility-margin-bottom{
+  margin-bottom: 4rem;
+}
+
 `;
 export default GlobalStyle;

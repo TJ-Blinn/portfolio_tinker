@@ -17,6 +17,55 @@ function ResumeItem({ year, title, subTitle, text }) {
   );
 }
 
-const ResumeItemStyled = styled.section``;
+const ResumeItemStyled = styled.section`
+  display: flex;
+  &:not(:last-child) {
+    padding-bottom: 3rem;
+  }
+
+  .left-content {
+    width: 50%;
+    padding-left: 20px;
+    position: relative;
+
+    /* This section is to create bullet points for each title | not working | */
+    /* &::before{
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      height: 17px;
+      width: 17px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      background-color: var(--background-dark-color);
+    } */
+    p {
+      display: inline-block;
+    }
+    h6 {
+      padding-bottom: 0.4rem;
+      font-size: 1.5rem;
+    }
+  }
+  .right-content {
+    padding-left: 5rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 15px;
+      height: 2px;
+      width: 3rem;
+      background-color: var(--border-color);
+    }
+    h5 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+`;
 
 export default ResumeItem;

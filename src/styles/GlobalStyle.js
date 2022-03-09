@@ -31,7 +31,10 @@ ${"" /* define root element and specify vars to be used accross the page */}
   body{
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
+    scrollbar-color: rebeccapurple green;
   }
+
+  
 
   a{
     font-family: inherit;

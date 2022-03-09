@@ -22,7 +22,7 @@ ${"" /* define root element and specify vars to be used accross the page */}
   --primary-color: #007bff;
   --seconday-color: #6c757d;
   --background-dark-color: #F1F1F1;
-  --background-dark-grey: #191d2b;
+  --background-dark-grey: #e4e4e4;
   --border-color:#cbced8;
   --background-light-color: #f1f1f1;
   --background-light-color-2: rgba(3,127,255,.3);

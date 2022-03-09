@@ -13,8 +13,15 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 // "Switch" has already been imported for react-router-dom and conflicts with this component for material-ui
 // It has been renamed "Switching" as a work-around
 import { Switch as Switching } from "@material-ui/core";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState("light-theme");
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
   return (
     <div className="App">
       <Sidebar />

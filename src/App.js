@@ -1,4 +1,4 @@
-// import styled from "styled-components";
+import { useEffect, useState } from "react";
 import Sidebar from "./Components/Sidebar";
 import styled from "styled-components";
 import { Route, Switch } from "react-router-dom";
@@ -13,14 +13,24 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 // "Switch" has already been imported for react-router-dom and conflicts with this component for material-ui
 // It has been renamed "Switching" as a work-around
 import { Switch as Switching } from "@material-ui/core";
-import { useEffect, useState } from "react";
 
 function App() {
   const [theme, setTheme] = useState("light-theme");
+  const [checked, setChecked] = useState(true);
 
   useEffect(() => {
     document.documentElement.className = theme;
   }, [theme]);
+
+  const themeToggler = () => {
+    if (theme === "dark-theme") {
+      setTheme("light-theme");
+      setChecked(false);
+    } else {
+      setTheme("dark-theme");
+      setChecked(true);
+    }
+  };
 
   return (
     <div className="App">
@@ -31,14 +41,7 @@ function App() {
           <LightModeIcon />
         </div>
         <div className="right-content">
-          <Switching
-            value=""
-            color="primary"
-            //checked={true}
-            //onChange={}
-            inputProps={{ "aria-label": "" }}
-            size="medium"
-          />
+          <Switching value="" color="primary" checked={checked} onClick={themeToggler} inputProps={{ "aria-label": "" }} size="medium" />
         </div>
       </div>
 

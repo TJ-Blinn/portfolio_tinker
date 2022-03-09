@@ -9,6 +9,10 @@ import PortfolioPage from "./Pages/PortfolioPage";
 // import BlogsPage from "./Pages/BlogsPage";
 import BlogsPage from "../src/Components/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
+import LightModeIcon from "@mui/icons-material/LightMode";
+// "Switch" has already been imported for react-router-dom and conflicts with this component for material-ui
+// It has been renamed "Switching" as a work-around
+import { Switch as Switching } from "@material-ui/core";
 
 function App() {
   return (
@@ -20,6 +24,20 @@ function App() {
           <div className="line-2"></div>
           <div className="line-3"></div>
           <div className="line-4"></div>
+        </div>
+
+        <div className="light-dark-mode">
+          <div className="left-content">
+            <LightModeIcon />
+          </div>
+          <div className="right-content">
+            <Switching
+              value=""
+              //checked={true}
+              //onChange={}
+              inputProps={{ "aria-label": "" }}
+            />
+          </div>
         </div>
 
         <Switch>
@@ -52,6 +70,24 @@ const MainContentStyled = styled.main`
   margin-left: 16.3rem;
   min-height: 100vh;
 
+  .light-dark-mode {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background-color: red;
+    width: 6.5rem;
+    height: 2.5rem;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .lines {
     position: absolute;
     min-height: 100%;
@@ -71,17 +107,5 @@ const MainContentStyled = styled.main`
     }
   }
 `;
-
-// function App() {
-//   return (
-//     <AppStyled>
-//       <h1>Styled Components</h1>
-//     </AppStyled>
-//   );
-// }
-
-// const AppStyled = styled.div`
-//   background-color: red;
-// `;
 
 export default App;

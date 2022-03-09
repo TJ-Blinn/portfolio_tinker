@@ -1,14 +1,10 @@
-import css1 from "../img/portImages/cv_css.png";
-import css2 from "../img/portImages/ms.png";
-import react1 from "../img/portImages/react_styled.png";
-import img2 from "../img/portImages/maya-4.jpg";
-import img3 from "../img/portImages/maya-3.jpg";
+import writing_placeholder from "../img/writing_placeholder.jpg";
 
 const portfolios = [
   {
     id: 1,
     category: "CSS",
-    image: css1,
+    image: writing_placeholder,
     link1: "https://www.google.com",
     link2: "https://www.google.com",
     title: "Responsive Resume",
@@ -17,7 +13,7 @@ const portfolios = [
   {
     id: 2,
     category: "Python",
-    image: img3,
+    image: writing_placeholder,
     link1: "https://www.google.com",
     link2: "https://www.google.com",
     title: "How To Animate In Maya",
@@ -26,7 +22,7 @@ const portfolios = [
   {
     id: 3,
     category: "Javascript",
-    image: img3,
+    image: writing_placeholder,
     link1: "https://www.google.com",
     link2: "https://www.google.com",
     title: "How To Animate In Maya",
@@ -35,7 +31,7 @@ const portfolios = [
   {
     id: 4,
     category: "Animation",
-    image: img2,
+    image: writing_placeholder,
     link1: "https://www.google.com",
     link2: "https://www.google.com",
     title: "How To Use Blender",
@@ -44,7 +40,7 @@ const portfolios = [
   {
     id: 5,
     category: "Animation",
-    image: img2,
+    image: writing_placeholder,
     link1: "https://www.google.com",
     link2: "https://www.google.com",
     title: "How To Use Blender",
@@ -53,7 +49,7 @@ const portfolios = [
   {
     id: 6,
     category: "React JS",
-    image: react1,
+    image: writing_placeholder,
     link1: "https://www.google.com",
     link2: "https://www.google.com",
     title: "Responsive Portfolio Website",
@@ -62,7 +58,7 @@ const portfolios = [
   {
     id: 7,
     category: "CSS",
-    image: css2,
+    image: writing_placeholder,
     link1: "https://www.google.com",
     link2: "https://www.google.com",
     title: "Microsoft Website Clone",

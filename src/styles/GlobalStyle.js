@@ -9,6 +9,7 @@ ${"" /* define root element and specify vars to be used accross the page */}
   --background-dark-grey: #191d2b;
   --border-color:#2e344e;
   --background-light-color: #f1f1f1;
+  --background-light-color-2: rgba(3,127,255,.3);
   --white-color: #fff;
   --font-light-color: #a4acc4;
   --font-dark-color: #313131;
@@ -64,6 +65,28 @@ ${"" /* define root element and specify vars to be used accross the page */}
 .utility-margin-bottom{
   margin-bottom: 4rem;
 }
+
+// Floating toggler (light-dark mode) 
+
+.light-dark-mode {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background-color: var(--background-light-color-2);
+    width: 6.5rem;
+    height: 2.5rem;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: flex;
+      align-items: center;
+      font-size: 1.7rem;
+      color: var(--white-color);
+    }
+  }
 
 `;
 export default GlobalStyle;

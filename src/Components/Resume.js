@@ -49,7 +49,7 @@ function Resume() {
         </div>
         {/* ----------------- Resume School section  */}
         <div className="small-title">
-          <SmallTitle icon={school} title={"School Experience"} />
+          <SmallTitle icon={school} title={"Education Qualifications"} />
         </div>
 
         <ResumeItem
@@ -59,12 +59,14 @@ function Resume() {
           text={"Lorem Ipsum Praesent sed cursus metus. Aliquam efficitur leo viverra"}
         />
 
-        <ResumeItem
-          year={"2015-2020"}
-          title={"BAC"}
-          subTitle={"Concordia Univeristy"}
-          text={"Lorem Ipsum Praesent sed cursus metus. Aliquam efficitur leo viverra"}
-        />
+        <div className="utility-margin-bottom">
+          <ResumeItem
+            year={"2015-2020"}
+            title={"BAC"}
+            subTitle={"Concordia Univeristy"}
+            text={"Lorem Ipsum Praesent sed cursus metus. Aliquam efficitur leo viverra"}
+          />
+        </div>
       </InnerLayout>
     </ResumeStyled>
   );

@@ -4,11 +4,14 @@ import styled from "styled-components";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Particle from "../Components/Particle";
 
 function HomePage() {
   return (
     <HomePageStyled>
-      <div className="particle-con">{/* <Particle /> */}</div>
+      <div className="particle-con">
+        <Particle />
+      </div>
 
       <div className="typography">
         <h1>

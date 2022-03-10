@@ -46,11 +46,30 @@ function ServicesSection() {
 const ServicesSectionStyled = styled.section`
   .services {
     margin-top: 5rem;
-    display: flex;
-    justify-content: space-between;
-    .mid-card {
-      margin: 0 1rem;
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+      /* .mid-card {
+        margin: 2rem 0;
+      } */
     }
+
+    @media screen and (max-width: 950px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 650px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* .mid-card {
+      margin: 0 1rem;
+    } */
   }
 `;
 

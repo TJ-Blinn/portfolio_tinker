@@ -102,7 +102,8 @@ ${"" /* define root element and specify vars to be used accross the page */}
 .light-dark-mode {
     position: absolute;
     right: 0;
-    top: 10%;
+    //top: 10%;
+    top: 50%;
     background-color: var(--background-light-color-2);
     width: 6.5rem;
     height: 2.5rem;
@@ -118,6 +119,31 @@ ${"" /* define root element and specify vars to be used accross the page */}
       color: var(--white-color);
     }
   }
+
+//Nav Toggler
+.line-menu-icon{
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  display: none;
+  z-index: 15;
+  svg{
+    font-size: 3rem;
+  }
+}
+
+.nav-toggle{
+  transform: translateX(0);
+  z-index: 20;
+}
+
+@media screen and (max-width:1200px){
+    .line-menu-icon{
+        display: block;
+    }
+  }
+
+// Global Media Queries
 
 `;
 export default GlobalStyle;

@@ -6,8 +6,8 @@ import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import ResumePage from "./Pages/ResumePage";
 import PortfolioPage from "./Pages/PortfolioPage";
-// import BlogsPage from "./Pages/BlogsPage";
-import BlogsPage from "../src/Components/BlogsPage";
+import BlogsPage from "./Pages/BlogsPage";
+// import BlogsPage from "../src/Components/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
 import LightModeIcon from "@mui/icons-material/LightMode";
 // "Switch" has already been imported for react-router-dom and conflicts with this component for material-ui

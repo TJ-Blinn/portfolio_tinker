@@ -1,8 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-function PrimaryButton({ title }) {
-  return <PrimaryButtonStyled>{title}</PrimaryButtonStyled>;
+function PrimaryButton({ title, href }) {
+  return (
+    <>
+      {href && (
+        <PrimaryButtonStyled href={href ? href : ""} target="_blank">
+          {title}
+        </PrimaryButtonStyled>
+      )}
+      {!href && <PrimaryButtonStyled>{title} </PrimaryButtonStyled>}
+    </>
+  );
 }
 
 const PrimaryButtonStyled = styled.a`

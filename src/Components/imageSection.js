@@ -12,33 +12,32 @@ function ImageSection() {
       </div>
       <div className="right-content">
         <h4>
-          I am <span>Lorem Ipsum</span>
+          I am a <span>Narrative Designer</span>
         </h4>
 
         <p className="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, purus ac convallis gravida, urna ex luctus elit, vel lacinia nisl lorem et
-          orci. Morbi sapien mauris, placerat eget turpis non, condimentum tempor.
+          I have worked as a writer in mobile and AAA platforms. I've gathered several years experience working closely with major franchises, including
+          Cosmopolitan, I Know What You Did Last Summer, and America's Next Top Model, CSI: Crime Scene Investigation. My passion for writing extends past work
+          hours into my hobbies where I like to dabble in novellas and board game design.
         </p>
         <div className="about-info">
           <div className="info-title">
             <p>Full Name</p>
-            <p>Age</p>
-            <p>Nationality</p>
             <p>Languages</p>
             <p>Location</p>
-            <p>Service</p>
+            <p>Weapon</p>
+            <p>Super Power</p>
           </div>
 
           <div className="info">
-            <p>Lorem Ipsum</p>
-            <p>36</p>
-            <p>Canadian</p>
+            <p>Jennifer Guzzo</p>
             <p>English, French</p>
             <p>Montreal, Canada</p>
-            <p>Writer</p>
+            <p>Plum Paper Planners</p>
+            <p>Meta-human Organization Skills</p>
           </div>
         </div>
-        <PrimaryButton title={"Download CV"} />
+        <PrimaryButton title={"Download CV"} href={"https://google.com"} />
       </div>
     </ImageSectionStyled>
   );
@@ -72,7 +71,7 @@ const ImageSectionStyled = styled.div`
       }
     }
     .paragraph {
-      padding: 1rem 0;
+      padding: 1.8rem 2rem;
     }
     .about-info {
       display: flex;

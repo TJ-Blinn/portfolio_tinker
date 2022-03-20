@@ -7,11 +7,16 @@ import ContactItem from "../Components/ContactItem";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { useForm } from "react-hook-form";
 
 function ContactPage() {
   const phone = <PhoneIcon />;
   const email = <EmailIcon />;
   const location = <LocationOnIcon />;
+
+  // form submit
+  const { register, handleSubmit, watch, errors } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   return (
     <MainLayout>
@@ -24,28 +29,28 @@ function ContactPage() {
               <h4>Get In Touch</h4>
             </div>
 
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <div className="form-field">
                 <label htmlFor="name"> Enter your name* </label>
-                <input type="text" id="name" />
+                <input type="text" id="name" ref={register} />
               </div>
 
               <div className="form-field">
                 <label htmlFor="email"> Enter your email* </label>
-                <input type="email" id="email" />
+                <input type="email" id="email" ref={register} />
               </div>
 
               <div className="form-field">
                 <label htmlFor="subject"> Subject: </label>
-                <input type="text" id="subject" />
+                <input type="text" id="subject" ref={register} />
               </div>
 
               <div className="form-field">
                 <label htmlFor="text-area">Enter your Message*</label>
-                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                <textarea name="textarea" id="textarea" ref={register} cols="30" rows="10"></textarea>
               </div>
 
-              <div className="form-field">
+              <div className="form-field f-button">
                 <PrimaryButton title={"Send Email"} />
               </div>
             </form>
@@ -68,10 +73,19 @@ const ContactPageStyled = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
+    @media screen and (max-width: 970px) {
+      grid-template-columns: repeat(1, 1fr);
+      .f-button {
+        margin-bottom: 3rem;
+      }
+    }
 
     .right-content {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      @media screen and (max-width: 500px) {
+        width: 70%;
+      }
     }
     .contact-title {
       h4 {
@@ -82,6 +96,10 @@ const ContactPageStyled = styled.section`
     }
     .form {
       width: 100%;
+      @media screen and (max-width: 500px) {
+        width: 100%;
+      }
+
       .form-field {
         margin-top: 2rem;
         position: relative;

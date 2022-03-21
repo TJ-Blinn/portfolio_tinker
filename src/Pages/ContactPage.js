@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { MainLayout, InnerLayout } from "../styles/layouts";
 import Title from "../Components/Title";
-import PrimaryButton from "../Components/PrimaryButton";
+// import PrimaryButton from "../Components/PrimaryButton";
 import ContactItem from "../Components/ContactItem";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -14,9 +14,32 @@ function ContactPage() {
   const email = <EmailIcon />;
   const location = <LocationOnIcon />;
 
-  // form submit
-  const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  // console.log("ERRORS ----------", errors);
+
+  function onSubmitForm(values) {
+    console.log(values);
+  }
+
+  const handleError = (errors) => {};
+
+  // Form Validation
+  const registerOptions = {
+    name: { required: "A name is required" },
+    email: { required: "An email is required" },
+    subject: { required: "A subject is required" },
+    textarea: {
+      required: "A message is required",
+      minLength: {
+        value: 4,
+        message: "Your message must be longer than 4 characters.",
+      },
+    },
+  };
 
   return (
     <MainLayout>
@@ -29,29 +52,36 @@ function ContactPage() {
               <h4>Get In Touch</h4>
             </div>
 
-            <form className="form" onSubmit={handleSubmit(onSubmit)}>
+            <form className="form" onSubmit={handleSubmit(onSubmitForm, handleError)}>
               <div className="form-field">
                 <label htmlFor="name"> Enter your name* </label>
-                <input type="text" id="name" ref={register} />
+                <input type="text" id="name" name="name" {...register("name", registerOptions.name)} />
+                <small className="text-danger">{errors.name?.message}</small>
               </div>
 
               <div className="form-field">
                 <label htmlFor="email"> Enter your email* </label>
-                <input type="email" id="email" ref={register} />
+                <input type="email" id="email" name="email" {...register("email", registerOptions.email)} />
+                <small className="text-danger">{errors.email?.message}</small>
               </div>
 
               <div className="form-field">
                 <label htmlFor="subject"> Subject: </label>
-                <input type="text" id="subject" ref={register} />
+                <input type="text" id="subject" name="subject" {...register("subject", registerOptions.subject)} />
+                <small className="text-danger">{errors.subject?.message}</small>
               </div>
 
               <div className="form-field">
                 <label htmlFor="text-area">Enter your Message*</label>
-                <textarea name="textarea" id="textarea" ref={register} cols="30" rows="10"></textarea>
+                <textarea type="text" id="textarea" name="textarea" {...register("textarea", registerOptions.textarea)} cols="30" rows="10"></textarea>
+                <small className="text-danger">{errors.textarea?.message}</small>
               </div>
 
-              <div className="form-field f-button">
-                <PrimaryButton title={"Send Email"} />
+              <div className="form-button">
+                {/* <PrimaryButton title={"Send Email"} type="submit" /> */}
+                <button type="submit" title={"Send Email"} className="button">
+                  Send Email
+                </button>
               </div>
             </form>
           </div>
@@ -75,7 +105,7 @@ const ContactPageStyled = styled.section`
     grid-column-gap: 2rem;
     @media screen and (max-width: 970px) {
       grid-template-columns: repeat(1, 1fr);
-      .f-button {
+      .form-button {
         margin-bottom: 3rem;
       }
     }
@@ -133,6 +163,38 @@ const ContactPageStyled = styled.section`
           padding: 0.8rem 1rem;
         }
       }
+    }
+    .form-button {
+      margin-top: 1.5rem;
+      .button {
+        border: none;
+        background-color: var(--primary-color);
+        padding: 0.8rem 2.5rem;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        font-size: inherit;
+        text-transform: uppercase;
+        position: relative;
+        transition: all 0.4s ease-in-out;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0.2rem;
+          transition: all 0.4s ease-in-out;
+          left: 0;
+          bottom: 0;
+        }
+        &:hover::after {
+          width: 100%;
+          background-color: var(--white-color);
+        }
+      }
+    }
+    .text-danger {
+      color: red;
+      padding-bottom: 0.5rem;
     }
   }
 `;

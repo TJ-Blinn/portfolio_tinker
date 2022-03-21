@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 // import Particle from "../Components/Particle.js";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Particle from "../Components/Particle";
 
@@ -15,11 +14,11 @@ function HomePage() {
 
       <div className="typography">
         <h1>
-          Hi! my name is <span> Bufford!</span>
+          Hi! my name is <span> Jenn!</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate justo non velit aliquet interdum. Curabitur finibus consequat sodales.
-          Nullam.
+          I'm happiest when things are organized neatly with colour-coding, I'm annoyed by plot-holes and bad scripts in my favourite TV shows and movies, and I
+          know enough gaming/nerd/internet culture references that I can probably host a weekly podcast. If you want to chat, ask me about The Sims!
         </p>
 
         {/* Update links below for Social Media */}
@@ -27,9 +26,7 @@ function HomePage() {
           <a href="https://www.facebook.com/jenn.guzzo" className="icon i-facebook">
             <FacebookIcon />
           </a>
-          <a href="https://www.instagram.com/j_hugz/" className="icon i-github">
-            <GitHubIcon />
-          </a>
+
           <a href="https://www.linkedin.com/in/jenniferguzzo/" className="icon i-linkedin">
             <LinkedInIcon />
           </a>
@@ -53,11 +50,12 @@ const HomePageStyled = styled.header`
   .typography {
     position: absolute;
     /* z-index: 2; */
+    line-height: 1.5;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 80%;
+    width: 60%;
 
     .icons {
       display: flex;
@@ -90,12 +88,6 @@ const HomePageStyled = styled.header`
         &:hover {
           border: 2px solid rgb(56, 88, 152);
           color: rgb(56, 88, 152);
-        }
-      }
-      .i-github {
-        &:hover {
-          border: 2px solid rgb(36, 41, 47);
-          color: rgb(36, 41, 47);
         }
       }
 

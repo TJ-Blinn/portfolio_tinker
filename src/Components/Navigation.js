@@ -61,7 +61,7 @@ const NavigationStyled = styled.nav`
   align-items: center;
   height: 100%;
   width: 100%;
-  border: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
   .avatar {
     width: 100%;
     border-bottom: 1px solid var(--border-color);
@@ -77,7 +77,7 @@ const NavigationStyled = styled.nav`
   .nav-items {
     width: 100%;
     text-align: center;
-    .active-class {
+    .activeClass {
       background-color: var(--primary-color-light);
       color: white;
     }
@@ -85,7 +85,7 @@ const NavigationStyled = styled.nav`
       display: block;
       a {
         display: block;
-        padding: 0.3rem 0;
+        padding: 0.45rem 0;
         position: relative;
         z-index: 10;
         transition: all 0.4s ease-in-out;
@@ -121,7 +121,7 @@ const NavigationStyled = styled.nav`
     width: 100%;
     p {
       padding: 2rem 0;
-      font-size: 1.1rem;
+      font-size: 0.8rem;
       display: block;
       text-align: center;
     }

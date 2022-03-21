@@ -27,7 +27,7 @@ ${"" /* define root element and specify vars to be used accross the page */}
   --background-light-color: #f1f1f1;
   --background-light-color-2: rgba(3,127,255,.3);
   --white-color: #151515;
-  --font-light-color: #a4acc4;
+  --font-light-color: #313131;
   --font-dark-color: #313131;
   --font-dark-color-2:#151515;
   --sidebar-dark-color: #E4E4E4;
@@ -65,7 +65,6 @@ ${"" /* define root element and specify vars to be used accross the page */}
     color: var(--font-light-color);
     scrollbar-color: rebeccapurple green;
   }
-
   
 
   a{
@@ -77,8 +76,13 @@ ${"" /* define root element and specify vars to be used accross the page */}
 
   h1{
     font-size: 2rem;
-    color: var(--white-color)
-      
+    color: var(--white-color);
+      span{
+        font-size: 4rem;
+    @media screen and (max-width: 500px) {    
+      font-size: 3rem;
+    }        
+  }
   }
 
   span{
@@ -96,6 +100,8 @@ ${"" /* define root element and specify vars to be used accross the page */}
 .utility-margin-bottom{
   margin-bottom: 4rem;
 }
+
+
 
 // Floating toggler (light-dark mode) 
 
@@ -135,6 +141,14 @@ ${"" /* define root element and specify vars to be used accross the page */}
 .nav-toggle{
   transform: translateX(0);
   z-index: 20;
+}
+
+
+
+  &:hover::after {
+    width: 100%;
+    background-color: var(--white-color);
+  }
 }
 
 @media screen and (max-width:1200px){

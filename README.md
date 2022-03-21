@@ -7,6 +7,11 @@
 5. material-ui - npm install @mui/material @emotion/react @emotion/styled @material-ui/icons
 6. particles.js
 
+Project based on final-portfolio-2 by Maclinz, originally a SkillsShare course
+
+final-portfolio-2 by Maclinz (Github)
+https://github.com/Maclinz/final-portfolio-2/tree/master/src/img 
+
 \_\_
 
 # Getting Started with Create React App

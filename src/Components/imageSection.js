@@ -37,7 +37,7 @@ function ImageSection() {
             <p>Meta-human Organization Skills</p>
           </div>
         </div>
-        <PrimaryButton title={"Download CV"} href={"https://google.com"} />
+        <PrimaryButton title={"Download CV"} href={"https://resume.io/r/Hb8d7J2Nt"} />
       </div>
     </ImageSectionStyled>
   );

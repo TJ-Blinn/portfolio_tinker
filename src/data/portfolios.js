@@ -3,12 +3,12 @@ import writing_placeholder from "../img/writing_placeholder.jpg";
 const portfolios = [
   {
     id: 1,
-    category: "CSS",
+    category: "Boardgames",
     image: writing_placeholder,
-    link1: "https://www.google.com",
-    link2: "https://www.google.com",
-    title: "Responsive Resume",
-    text: "Created with only HTML and CSS.",
+    link1: "https://boardgamegeek.com/boardgame/171233/big-book-madness",
+    link2: "https://drive.google.com/file/d/10DFlmt8FvYpexTvTpo4oReLDOq61ufLw/view?usp=sharing",
+    title: "Big Book of Madness",
+    text: "BBofM - Rules Eratta and FAQ_1.3.",
   },
   {
     id: 2,

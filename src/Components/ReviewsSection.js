@@ -12,13 +12,13 @@ function ReviewsSection() {
         <div className="reviews">
           <ReviewItem
             text={
-              "Praesent sed cursus metus. Aliquam efficitur leo viverra, convallis justo eu, porta lectus. Nulla commodo commodo ligula vitae feugiat. Nullam id libero est."
+              "Meow all night having their mate disturbing sleeping humans need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me. Claw drapes cough furball for sleep claws in the eye of the beholder."
             }
           />
 
           <ReviewItem
             text={
-              "Praesent sed cursus metus. Aliquam efficitur leo viverra, convallis justo eu, porta lectus. Nulla commodo commodo ligula vitae feugiat. Nullam id libero est. Maecenas pharetra diam in elit cursus molestie. Duis varius risus quis ullamcorper placerat. Vivamus et dignissim tellus. Proin dui lorem, efficitur in sollicitudin quis, pretium sed lacus. Donec sem justo, sollicitudin nec ullamcorper a, blandit vitae ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed maximus nunc. Praesent tristique laoreet lacus, sit amet convallis mi facilisis eu."
+              "Curl up and sleep on the freshly laundered towels oooo! dangly balls! jump swat swing flies so sweetly to the floor crash move on wash belly nap but jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water and poop in litter box."
             }
           />
         </div>

@@ -16,7 +16,7 @@ import { IconButton, Switch as Switching } from "@material-ui/core";
 import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
-  const [theme, setTheme] = useState("light-theme");
+  const [theme, setTheme] = useState("dark-theme");
   const [checked, setChecked] = useState(true);
   const [navToggle, setNavToggle] = useState(false);
 

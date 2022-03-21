@@ -27,7 +27,6 @@ const TitleStyled = styled.div`
     @media screen and (max-width: 490px) {
       font-size: 2.8rem;
     }
-
     @media screen and (max-width: 370px) {
       font-size: 2rem;
     }
@@ -64,11 +63,9 @@ const TitleStyled = styled.div`
       @media screen and (max-width: 620px) {
         font-size: 4rem;
       }
-
       @media screen and (max-width: 490px) {
         font-size: 3rem;
       }
-
       @media screen and (max-width: 370px) {
         font-size: 2rem;
       }

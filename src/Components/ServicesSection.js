@@ -17,7 +17,7 @@ function ServicesSection() {
             icon={<VideogameAssetIcon fontSize="large" />}
             title={"Video Game Writer"}
             paragraph={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, purus acconvallis gravida, urna ex luctus elit, vel lacinia nisl lorem et orci. Morbi sapien mauris, placerat eget turpis non, condimentum tempor."
+              "Roll over and sun my belly woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now but x. Wake up human for food at 4am spread kitty litter all over house so kitty loves pigs but this is the day . "
             }
           />
           <div className="mid-card">
@@ -25,7 +25,7 @@ function ServicesSection() {
               icon={<CasinoIcon fontSize="large" />}
               title={"Amateur Boardgame Designer"}
               paragraph={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, purus acconvallis gravida, urna ex luctus elit, vel lacinia nisl lorem et orci. Morbi sapien mauris, placerat eget turpis non, condimentum tempor."
+                "Roll over and sun my belly woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now but x. Wake up human for food at 4am spread kitty litter all over house so kitty loves pigs but this is the day . "
               }
             />
           </div>
@@ -34,7 +34,7 @@ function ServicesSection() {
             icon={<ChairIcon fontSize="large" />}
             title={"Amateur Miniatures Crafter"}
             paragraph={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, purus acconvallis gravida, urna ex luctus elit, vel lacinia nisl lorem et orci. Morbi sapien mauris, placerat eget turpis non, condimentum tempor."
+              "Roll over and sun my belly woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now but x. Wake up human for food at 4am spread kitty litter all over house so kitty loves pigs but this is the day . "
             }
           />
         </div>

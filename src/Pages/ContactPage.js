@@ -6,6 +6,7 @@ import ContactItem from "../Components/ContactItem";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { AlertTitle, Alert } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { init, sendForm } from "emailjs-com";
 init("Xd1SuwKkglLgY1XX5");
@@ -95,7 +96,11 @@ function ContactPage() {
           <div className="left-content">
             <div className="contact-title">
               <h4>Get In Touch</h4>
-              <p className="status-message">{statusMessage}</p>
+
+              <Alert severity="success">
+                <AlertTitle className="status-message">Success</AlertTitle>
+                {statusMessage}
+              </Alert>
             </div>
 
             <form className="form" onSubmit={handleSubmit(onSubmit, handleError)}>
@@ -244,6 +249,11 @@ const ContactPageStyled = styled.section`
     .text-danger {
       color: red;
       padding-bottom: 0.5rem;
+    }
+
+    .failure {
+      opacity: 1;
+      color: red;
     }
   }
 `;

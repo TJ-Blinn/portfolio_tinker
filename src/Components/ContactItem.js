@@ -2,13 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
 function ContactItem({ title, icon, contact1 }) {
+  let titleBlurb =
+    title === "Email" ? (
+      <a className="email-link" href="mailto:guzzojenn@gmail.com" aria-role="link">
+        {contact1}
+      </a>
+    ) : (
+      <p>{contact1}</p>
+    );
   return (
     <ContactItemStyled>
       <div className="left-content">{icon}</div>
 
       <div className="right-content">
         <h6>{title}</h6>
-        <p>{contact1}</p>
+        {titleBlurb}
       </div>
     </ContactItemStyled>
   );
@@ -39,13 +47,24 @@ const ContactItemStyled = styled.div`
     }
   }
 
+  .email-link {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: color 0.5s;
+  }
+
+  a[href^="mailto"]:hover {
+    content: attr(title);
+    color: var(--white-color);
+  }
+
   .right-content {
     h6 {
       color: var(--white-color);
       font-size: 1.2rem;
       padding-bottom: 0.6rem;
     }
-    /* !!! Change these to anchor tags if you want to redirect to email on click !!!  */
+
     p {
       padding: 0.1rem 0;
       color: var(--primary-color);

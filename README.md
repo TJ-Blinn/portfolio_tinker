@@ -6,11 +6,13 @@
 4. npm install react-router-dom
 5. material-ui - npm install @mui/material @emotion/react @emotion/styled @material-ui/icons
 6. particles.js
+7. EmailJs
+8. react-hook-form
 
 Project based on final-portfolio-2 by Maclinz, originally a SkillsShare course
 
 final-portfolio-2 by Maclinz (Github)
-https://github.com/Maclinz/final-portfolio-2/tree/master/src/img 
+https://github.com/Maclinz/final-portfolio-2/tree/master/src/img
 
 \_\_
 

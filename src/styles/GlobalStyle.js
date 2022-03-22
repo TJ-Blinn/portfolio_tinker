@@ -149,7 +149,7 @@ ${"" /* define root element and specify vars to be used accross the page */}
     width: 100%;
     background-color: var(--white-color);
   }
-}
+
 
 @media screen and (max-width:1200px){
     .line-menu-icon{

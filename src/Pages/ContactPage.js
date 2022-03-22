@@ -19,6 +19,8 @@ function ContactPage() {
   // const Contact = () => {
   const [contactNumber, setContactNumber] = useState("000000");
 
+  const [statusMessage, setStatusMessage] = useState("Message");
+
   const generateContactNumber = () => {
     const numStr = "000000" + ((Math.random() * 1000000) | 0);
     setContactNumber(numStr.substring(numStr.length - 6));
@@ -37,14 +39,29 @@ function ContactPage() {
   const messageCharsLeft = 1500 - message.length;
 
   function onSubmit(values) {
-    console.log("THIS IS ONSUBMIT VALUES --------", values);
+    // console.log("THIS IS ONSUBMIT VALUES --------", values);
+
+    const statusMessage = document.querySelector(".status-message");
+
+    // reset the form when the sendForm() function is successful.
+    const form = document.querySelector(".form");
+
     generateContactNumber();
-    sendForm("default_service", "template_3irqhvp", ".form").then(
+    sendForm("contact_form", "template_3irqhvp", ".form").then(
       function (response) {
-        console.log("SUCCESS!", response.status, response.text);
+        setStatusMessage("Message sent!");
+        statusMessage.className = "status-message success";
+        setTimeout(() => {
+          statusMessage.className = "status-message";
+        }, 5000);
+        form.reset();
       },
       function (error) {
-        console.log("FAILED...", error);
+        setStatusMessage("Failed to send message! Please try again later.");
+        statusMessage.className = "status-message failure";
+        setTimeout(() => {
+          statusMessage.className = "status-message";
+        }, 5000);
       }
     );
   }
@@ -78,6 +95,7 @@ function ContactPage() {
           <div className="left-content">
             <div className="contact-title">
               <h4>Get In Touch</h4>
+              <p className="status-message">{statusMessage}</p>
             </div>
 
             <form className="form" onSubmit={handleSubmit(onSubmit, handleError)}>

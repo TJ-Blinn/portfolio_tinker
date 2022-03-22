@@ -1,28 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { MainLayout, InnerLayout } from "../styles/layouts";
 import Title from "../Components/Title";
-// import PrimaryButton from "../Components/PrimaryButton";
 import ContactItem from "../Components/ContactItem";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useForm } from "react-hook-form";
+import { init, sendForm } from "emailjs-com";
+init("Xd1SuwKkglLgY1XX5");
 
 function ContactPage() {
   const phone = <PhoneIcon />;
   const email = <EmailIcon />;
   const location = <LocationOnIcon />;
 
+  // method for generating a contact number on emailJS form
+  // const Contact = () => {
+  const [contactNumber, setContactNumber] = useState("000000");
+
+  const generateContactNumber = () => {
+    const numStr = "000000" + ((Math.random() * 1000000) | 0);
+    setContactNumber(numStr.substring(numStr.length - 6));
+  };
+
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
   // console.log("ERRORS ----------", errors);
 
-  function onSubmitForm(values) {
-    console.log(values);
+  // character counter for message box in ContactPage
+  const message = watch("textarea") || "";
+  const messageCharsLeft = 1500 - message.length;
+
+  function onSubmit(values) {
+    console.log("THIS IS ONSUBMIT VALUES --------", values);
+    generateContactNumber();
+    sendForm("default_service", "template_3irqhvp", ".form").then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
   }
 
   const handleError = (errors) => {};
@@ -38,6 +62,10 @@ function ContactPage() {
         value: 4,
         message: "Your message must be longer than 4 characters.",
       },
+      maxLength: {
+        value: 1500,
+        message: "For messages over 1500 characters, please email guzzojenn@gmail.com",
+      },
     },
   };
 
@@ -52,8 +80,10 @@ function ContactPage() {
               <h4>Get In Touch</h4>
             </div>
 
-            <form className="form" onSubmit={handleSubmit(onSubmitForm, handleError)}>
+            <form className="form" onSubmit={handleSubmit(onSubmit, handleError)}>
               <div className="form-field">
+                <input type="hidden" name="contact_number" value={contactNumber} />
+
                 <label htmlFor="name"> Enter your name* </label>
                 <input type="text" id="name" name="name" {...register("name", registerOptions.name)} />
                 <small className="text-danger">{errors.name?.message}</small>
@@ -75,6 +105,7 @@ function ContactPage() {
                 <label htmlFor="text-area">Enter your Message*</label>
                 <textarea type="text" id="textarea" name="textarea" {...register("textarea", registerOptions.textarea)} cols="30" rows="10"></textarea>
                 <small className="text-danger">{errors.textarea?.message}</small>
+                <p className="message-chars-left">{messageCharsLeft}</p>
               </div>
 
               <div className="form-button">

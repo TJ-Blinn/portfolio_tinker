@@ -7,7 +7,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { AlertTitle, Alert } from "@mui/material";
-import { useForm } from "react-hook-form";
+import { useForm, reset } from "react-hook-form";
 import { init, sendForm } from "emailjs-com";
 init("Xd1SuwKkglLgY1XX5");
 
@@ -20,7 +20,7 @@ function ContactPage() {
   // const Contact = () => {
   const [contactNumber, setContactNumber] = useState("000000");
 
-  const [statusMessage, setStatusMessage] = useState("Message");
+  const [statusMessage, setStatusMessage] = useState(null);
 
   const generateContactNumber = () => {
     const numStr = "000000" + ((Math.random() * 1000000) | 0);
@@ -31,9 +31,17 @@ function ContactPage() {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    reset,
+    formState,
+    formState: { errors, isSubmitSuccessful },
   } = useForm();
   // console.log("ERRORS ----------", errors);
+
+  React.useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset();
+    }
+  }, [formState, reset]);
 
   // character counter for message box in ContactPage
   const message = watch("textarea") || "";
@@ -45,17 +53,17 @@ function ContactPage() {
     const statusMessage = document.querySelector(".status-message");
 
     // reset the form when the sendForm() function is successful.
-    const form = document.querySelector(".form");
+    // const form = document.querySelector(".form");
 
     generateContactNumber();
     sendForm("contact_form", "template_3irqhvp", ".form").then(
       function (response) {
         setStatusMessage("Message sent!");
         statusMessage.className = "status-message success";
+        // form.reset();
         setTimeout(() => {
           statusMessage.className = "status-message";
         }, 5000);
-        form.reset();
       },
       function (error) {
         setStatusMessage("Failed to send message! Please try again later.");
@@ -87,6 +95,17 @@ function ContactPage() {
     },
   };
 
+  // Material-ui alert var to be used in h4
+  let alert = "";
+  if (statusMessage) {
+    alert = (
+      <Alert severity="success">
+        <AlertTitle className="status-message">Success</AlertTitle>
+        {statusMessage}
+      </Alert>
+    );
+  }
+
   return (
     <MainLayout>
       <Title title={"Contact"} span={"Contact"} />
@@ -96,11 +115,7 @@ function ContactPage() {
           <div className="left-content">
             <div className="contact-title">
               <h4>Get In Touch</h4>
-
-              <Alert severity="success">
-                <AlertTitle className="status-message">Success</AlertTitle>
-                {statusMessage}
-              </Alert>
+              {alert}
             </div>
 
             <form className="form" onSubmit={handleSubmit(onSubmit, handleError)}>

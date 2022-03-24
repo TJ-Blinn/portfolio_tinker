@@ -8,6 +8,7 @@
 6. particles.js
 7. EmailJs
 8. react-hook-form
+9. classnames
 
 Project based on final-portfolio-2 by Maclinz, originally a SkillsShare course
 

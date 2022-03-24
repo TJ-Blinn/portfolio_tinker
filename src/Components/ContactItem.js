@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 function ContactItem({ title, icon, contact1 }) {
-  let titleBlurb =
+  let emailPopUp =
     title === "Email" ? (
-      <a className="email-link" href="mailto:guzzojenn@gmail.com" aria-role="link">
+      <a className="email-link" href="mailto:guzzojenn@gmail.com">
         {contact1}
       </a>
     ) : (
@@ -16,7 +16,7 @@ function ContactItem({ title, icon, contact1 }) {
 
       <div className="right-content">
         <h6>{title}</h6>
-        {titleBlurb}
+        {emailPopUp}
       </div>
     </ContactItemStyled>
   );

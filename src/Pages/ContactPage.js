@@ -9,6 +9,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { AlertTitle, Alert } from "@mui/material";
 import { useForm, reset } from "react-hook-form";
 import { init, sendForm } from "emailjs-com";
+import classNames from "classnames";
 init("Xd1SuwKkglLgY1XX5");
 
 function ContactPage() {
@@ -17,7 +18,7 @@ function ContactPage() {
   const location = <LocationOnIcon />;
 
   // method for generating a contact number on emailJS form
-  // const Contact = () => {
+
   const [contactNumber, setContactNumber] = useState("000000");
 
   const [statusMessage, setStatusMessage] = useState(null);
@@ -37,11 +38,14 @@ function ContactPage() {
   } = useForm();
   // console.log("ERRORS ----------", errors);
 
+  // reset the form when the sendForm() function is successful.
   React.useEffect(() => {
     if (formState.isSubmitSuccessful) {
       reset();
     }
   }, [formState, reset]);
+
+  // reset the statusMessage for Success material-ui pop-up
 
   // character counter for message box in ContactPage
   const message = watch("textarea") || "";
@@ -50,26 +54,24 @@ function ContactPage() {
   function onSubmit(values) {
     // console.log("THIS IS ONSUBMIT VALUES --------", values);
 
-    const statusMessage = document.querySelector(".status-message");
-
-    // reset the form when the sendForm() function is successful.
-    // const form = document.querySelector(".form");
+    // const statusMessageElement = document.querySelector(".status-message");
 
     generateContactNumber();
     sendForm("contact_form", "template_3irqhvp", ".form").then(
       function (response) {
         setStatusMessage("Message sent!");
-        statusMessage.className = "status-message success";
-        // form.reset();
+        // statusMessageElement.className = "status-message success";
+
         setTimeout(() => {
-          statusMessage.className = "status-message";
-        }, 5000);
+          console.log("SET TIMEOUT MESSAGE ----------");
+          setStatusMessage(null);
+        }, 1000);
       },
       function (error) {
         setStatusMessage("Failed to send message! Please try again later.");
-        statusMessage.className = "status-message failure";
+        // statusMessageElement.className = "status-message failure";
         setTimeout(() => {
-          statusMessage.className = "status-message";
+          // statusMessageElement.className = "status-message";
         }, 5000);
       }
     );
@@ -96,15 +98,6 @@ function ContactPage() {
   };
 
   // Material-ui alert var to be used in h4
-  let alert = "";
-  if (statusMessage) {
-    alert = (
-      <Alert severity="success">
-        <AlertTitle className="status-message">Success</AlertTitle>
-        {statusMessage}
-      </Alert>
-    );
-  }
 
   return (
     <MainLayout>
@@ -115,7 +108,20 @@ function ContactPage() {
           <div className="left-content">
             <div className="contact-title">
               <h4>Get In Touch</h4>
-              {alert}
+
+              {statusMessage && (
+                <Alert severity="success">
+                  <AlertTitle
+                    className={classNames({
+                      "status-message": true,
+                      success: !!statusMessage,
+                    })}
+                  >
+                    Success
+                  </AlertTitle>
+                  {statusMessage}
+                </Alert>
+              )}
             </div>
 
             <form className="form" onSubmit={handleSubmit(onSubmit, handleError)}>

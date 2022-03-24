@@ -56,6 +56,8 @@ const ContactItemStyled = styled.div`
   a[href^="mailto"]:hover {
     content: attr(title);
     color: var(--white-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
   }
 
   .right-content {

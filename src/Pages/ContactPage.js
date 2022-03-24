@@ -45,33 +45,23 @@ function ContactPage() {
     }
   }, [formState, reset]);
 
-  // reset the statusMessage for Success material-ui pop-up
-
   // character counter for message box in ContactPage
   const message = watch("textarea") || "";
   const messageCharsLeft = 1500 - message.length;
 
   function onSubmit(values) {
-    // console.log("THIS IS ONSUBMIT VALUES --------", values);
-
-    // const statusMessageElement = document.querySelector(".status-message");
-
     generateContactNumber();
     sendForm("contact_form", "template_3irqhvp", ".form").then(
       function (response) {
         setStatusMessage("Message sent!");
-        // statusMessageElement.className = "status-message success";
-
         setTimeout(() => {
-          console.log("SET TIMEOUT MESSAGE ----------");
           setStatusMessage(null);
-        }, 1000);
+        }, 3000);
       },
       function (error) {
         setStatusMessage("Failed to send message! Please try again later.");
-        // statusMessageElement.className = "status-message failure";
         setTimeout(() => {
-          // statusMessageElement.className = "status-message";
+          setStatusMessage(null);
         }, 5000);
       }
     );
@@ -122,6 +112,20 @@ function ContactPage() {
                   {statusMessage}
                 </Alert>
               )}
+
+              {statusMessage && (
+                <Alert severity="error">
+                  <AlertTitle
+                    className={classNames({
+                      "status-message": true,
+                      failure: !!statusMessage,
+                    })}
+                  >
+                    Error - <strong>Please check your internet connection and try again</strong>
+                  </AlertTitle>
+                  {statusMessage}
+                </Alert>
+              )}
             </div>
 
             <form className="form" onSubmit={handleSubmit(onSubmit, handleError)}>
@@ -153,7 +157,6 @@ function ContactPage() {
               </div>
 
               <div className="form-button">
-                {/* <PrimaryButton title={"Send Email"} type="submit" /> */}
                 <button type="submit" title={"Send Email"} className="button">
                   Send Email
                 </button>

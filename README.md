@@ -1,27 +1,8 @@
-## libraries
+## Overview
 
-1. styled-components
-2. react-intersection-observer
-3. npm install react-particles-js
-4. npm install react-router-dom
-5. material-ui - npm install @mui/material @emotion/react @emotion/styled @material-ui/icons
-6. particles.js
-7. EmailJs
-8. react-hook-form
-9. classnames
+This fully responsive portfolio website utilizes a particlesJS dynamic background, light/dark mode, server-less email service through Javascript with form validation, a Portfolio page with keyword filters, a customizable progress-bar to display skills with a percent, and a nav bar that can be toggled.
 
-Project based on final-portfolio-2 by Maclinz, originally a SkillsShare course
-
-final-portfolio-2 by Maclinz (Github)
-https://github.com/Maclinz/final-portfolio-2/tree/master/src/img
-
-\_\_
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Getting Started
 
 In the project directory, you can run:
 
@@ -30,60 +11,61 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Depencies
 
-### `npm test`
+- [styled-components](https://styled-components.com/)
+- [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer)
+- [react-particles-js](https://www.npmjs.com/package/react-particles-js)
+- [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start)
+- [react-hook-form](https://react-hook-form.com/)
+- [MUI] (https://mui.com/)
+- [MUI icons] (https://mui.com/material-ui/material-icons/ )
+- [EmailJs](https://www.emailjs.com/)
+- [classnames](https://www.npmjs.com/package/classnames)
+- [particles.js](https://www.npmjs.com/package/react-particles-js)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Documentation
 
-### `npm run build`
+### Homepage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Homepage]()
+<br >
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Homepage with light mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Homepage with light mode]()
+<br >
 
-### `npm run eject`
+### Navigation bar toggle
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Navigation bar toggle]()
+<br >
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Resume customizable progress-bar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Resume customizable progress-bar]()
+<br >
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Keyword filter for Portfolio Page
 
-## Learn More
+![Keyword filter for Portfolio Page]()
+<br >
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Contact Form with validation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Contact Form with validation]()
+<br >
 
-### Code Splitting
+\_\_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Credits:
 
-### Analyzing the Bundle Size
+Project based on final-portfolio-2 by Maclinz, originally a SkillsShare course (February 28, 2022)
+final-portfolio-2 by Maclinz [Github]
+(https://github.com/Maclinz/final-portfolio-2/tree/master/src/img)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Particles.js by: [Matteo Bruni](https://github.com/matteobruni/tsparticles/discussions/categories/q-a)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#
